@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url("https://cdn.wallpapersafari.com/83/74/aCdhSf.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }   
+
+        .companyMotto {
+            background-color: rgba(90, 90, 90, 0.599);
+            backdrop-filter: blur(2px);
+            min-height: 250px; /* Further reduced height */
+            min-width: 300px;  /* Further reduced width */
+            color: white;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 15px;
+            flex-direction: column;
+            box-shadow: 3px 3px 3px black;
+        }
+
+        .second-container{
+            animation: fadeInUp;
+            animation-duration: 800ms;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #Heading {
+            font-family: Montserrat;
+            font-weight: bolder;
+            font-size: 3em; /* Reduced font size */
+            background: linear-gradient(to bottom, #000000, #620c9b);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-align: center;
+        }
+
+        .companyMotto h3 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 200;
+            font-size: 1.2em; /* Slightly reduced font size */
+        }
+
+        .input-Container{
+            width: 100%;
+            height: 80%;
+            margin-top: 24px;
+        }
+
+        label {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1.2em; /* Slightly reduced font size */
+        }
+
+        input {
+            border: none;
+            border-bottom: 1px solid rgb(254, 119, 200);
+            padding-left: 10px;
+            height: 25px; /* Reduced height */
+            width: 400px;  /* Reduced width */
+            font-size: 0.9em; /* Slightly reduced font size */
+            background-color: rgba(255, 0, 0, 0);
+            color: white;
+        }
+
+        input::placeholder{
+            color: white;
+        }
+
+        .inputs{
+            
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        input[type="date"]{
+            font-size: 1em;
+        }
+        
+        input:focus {
+            border-color: #5681ff; /* Border color on focus */
+            outline: none; /* Remove default outline */
+          }
+
+        #submitButton {
+            display: flex;
+            justify-content: center; /* Center the button within the container */
+            margin-top: 30px;
+        }
+        
+        #done {
+            height: 45px;  /* Reduced height */
+            width: 90px;   /* Reduced width */
+            font-size: medium; /* Slightly reduced font size */
+            border-radius: 70px;
+            background-color: black;
+            border: none;
+            color: white;
+            text-align: center;
+            transition: all 500ms;
+            margin-bottom: 20px;
+        }
+        
+        #done:hover {
+            transform: scale(1.1);
+            background-color: rgb(214, 127, 33);
+            color: white;
+        }
+        
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0; /* Start as transparent */
+                transform: translateY(50px); /* Start slightly below */
+            }
+            100% {
+                opacity: 1; /* End as fully visible */
+                transform: translateY(0); /* End at the original position */
+            }
+        }
+
+    </style>
+    <div class="registerContainer">
+        <div class="companyMotto">
+            <div class="second-container">
+                <h1 id="Heading">Hackathon</h1>
+                <h3>Code, Create, Conquer!</h3>
+                <div class="input-Container">
+                    <form>
+                        <div class="inputs">
+                            <label>Name</label>
+                            <br>
+                            <input id="name" type="text" placeholder="Surname, FirstName M.I">
+                            <br>
+                        </div>
+                        
+                        <div class="inputs">
+                            <label>Email</label>
+                            <br>
+                            <input id="email" type="text" placeholder="email@gmail.com">
+                            <br>
+                        </div>
+                        
+                        <div class="inputs">
+                            <label>Password</label>
+                            <br>
+                            <input id="password" type="password" placeholder="password">
+                            <br>
+                        </div>
+                        
+                        <div class="inputs">
+                            <label>Date of Birth</label>
+                            <br>
+                            <input id="birthday" type="date">
+                        </div>
+                        
+                        <div id="submitButton">
+                            <Button id="done" type="submit">Submit</Button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer style="color: white; position:absolute; bottom: 0; margin-bottom:20px">© Made By Ian Lerald G. Montances</footer>
+    <script src="https://kit.fontawesome.com/8d84e31e5f.js" crossorigin="anonymous"></script>
+    <script>
+        const button = document.getElementById("done");
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const birthday = document.getElementById("birthday");
+
+        button.onclick = function(){
+            if(name.value == "" || email.value == "" || password.value == "" || birthday.value == "")
+                alert("One or more input(s) are empty");
+            else
+                alert("Registration Done");
+        }
+    </script>
+</body>
+</html>
